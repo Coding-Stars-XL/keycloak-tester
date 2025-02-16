@@ -7,14 +7,15 @@ services:
       dockerfile: Dockerfile
     command: ["start", "--verbose"]
     environment:
-      - KC_FEATURES=admin-fine-grained-authz:v2,hostname:v2
+      - KC_FEATURES=admin-fine-grained-authz:v2,hostname:v2,fips
+      - KC_FIPS_MODE=strict
       - KC_DB=postgres
       - KC_DB_URL=jdbc:postgresql://postgres:5432/keycloak
       - KC_DB_USERNAME=keycloak
-      - KC_DB_PASSWORD=keycloak
+      - KC_DB_PASSWORD=MySuperSecretPassword!
       - KC_HOSTNAME=https://localhost/auth
       - KC_BOOTSTRAP_ADMIN_USERNAME=admin
-      - KC_BOOTSTRAP_ADMIN_PASSWORD=changeme #change to desired password
+      - KC_BOOTSTRAP_ADMIN_PASSWORD=MySuperSecretPassword! #change to desired password
       - KC_HTTP_ENABLED=true
       - KC_PROXY_HEADER=xforwarded
     ports:
