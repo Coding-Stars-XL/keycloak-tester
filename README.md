@@ -14,6 +14,19 @@ ________________________________________________________________________________
 
 __________________________________________________________________________________________________
 
+**Create a ".env" file in the main directory where the docker-compose.yml is**
+
+- ***Populate the ".env" file with the following variables***
+  - DB_NAME=changeme
+  - DB_USER=changeme
+  - DB_PASS=changeme
+  - KC_ADMIN_USER=changeme
+  - KC_ADMIN_PASS=changeme
+
+***Special note for FIPS Deployments: All passwords need ot be at least 16 characters***
+
+__________________________________________________________________________________________________
+
 **Deploy your stack!**
 
 While you are in the "test-identity" directory run:
