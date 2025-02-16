@@ -23,7 +23,9 @@ ________________________________________________________________________________
   - KC_ADMIN_USER=changeme
   - KC_ADMIN_PASS=changeme
 
-***Special note for FIPS Deployments: All passwords need ot be at least 16 characters***
+*Special note for FIPS Deployments: All passwords need ot be at least 16 characters*
+*Note: make sure you populate variables with your own information (delete the "changeme" and use your own)*
+*Note: I would suggest changing the "DB_USER" to "postgres" to avoid issues*
 
 __________________________________________________________________________________________________
 
